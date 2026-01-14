@@ -12,4 +12,4 @@
 **v.** MongoDb - database
 
 ### 2. The repository
-Everything starts with the repository so needs to be set up interfaced with the Eclipse integrated development environment.
+Everything starts with the repository so needs to be set up interfaced with the Eclipse integrated development environment.[Setting up repository](./00-notes/a-setting-up-repository/readme.md)
