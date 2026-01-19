@@ -1,0 +1,45 @@
+
+services:
+  first_container:
+    image: ubuntu:latest
+    container_name: first_container
+    hostname: first_container
+    command:
+      - /bin/bash
+      - -c 
+      - | 
+        apt -y update;
+        apt -y upgrade;  
+        apt -y install nano;
+        apt -y install openssh-client;
+        apt -y install openssh-server;        
+        service ssh start;
+        sleep infinity;
+    networks:
+      container-net:
+                    
+  second_container:
+    image: ubuntu:latest
+    container_name: second_container
+    hostname: second_container
+    command:
+      - /bin/bash
+      - -c 
+      - | 
+        apt -y update;
+        apt -y upgrade;  
+        apt -y install nano;
+        apt -y install openssh-client;
+        apt -y install openssh-server;
+        echo -e "CocaCola\nCocaCola" | passwd root;        
+        service ssh start;
+        sleep infinity;
+    networks:
+      container-net:  
+    volumes:
+      - ./ssh_configs/root_permission.conf:/etc/ssh/sshd_config.d/root_permission.conf
+        
+networks:
+  container-net:
+    name: container-net
+    driver: bridge

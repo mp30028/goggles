@@ -13,11 +13,17 @@
 
 ### 2. The Repository
 Everything starts with the repository so needs to be set up and interfaced with the Eclipse integrated development environment.  
-[Notes on setting up the repository](./00-notes/a-setting-up-repository/readme.md)
+[Notes on setting up the repository](./01-setup-repository/a-setting-up-repository/readme.md)
 
 ### 3. Project (Repository) Layout
 **README.md** file - This file. Root or Home readme file. Describes key aspects of the project and links to other notes.   
 **00-notes** folder - Contains sub-folders with detailed additional readme files organised by category and linked to from the Home readme  
 
-### 4. Setting up a database
-[MongoDb setup](./00-notes/b-setup-mongodb/readme.md) to support an event driven services architecture and under pin the systems and services developed.
+### 4. Run fabric components in containers
+Underpinning components such as databases, monitoring-server, web-servers, application-servers etc. will run within Docker containers and so [understanding how to setup, orchestrate,  startup, monitor and manage them]( will be important.
+
+### 5. Setting up a database
+[MongoDb setup](./03-setup-mongo/a-mongodb-with-docker-cmd/readme.md) to support an event driven services architecture and under pin the systems and services developed.
+
+### General stuff
+**i.** [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)  

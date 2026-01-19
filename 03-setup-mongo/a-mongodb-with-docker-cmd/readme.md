@@ -18,4 +18,6 @@
   `mongosh`
   
   ![Command prompt trace](./_assets/01-running-simple-mongo-setup.png)
+  
+
 ### [Home](../../README.md)
