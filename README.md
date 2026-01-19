@@ -20,7 +20,7 @@ Everything starts with the repository so needs to be set up and interfaced with 
 **00-notes** folder - Contains sub-folders with detailed additional readme files organised by category and linked to from the Home readme  
 
 ### 4. Run fabric components in containers
-Underpinning components such as databases, monitoring-server, web-servers, application-servers etc. will run within Docker containers and so [understanding how to setup, orchestrate,  startup, monitor and manage them]( will be important.
+Underpinning components such as databases, monitoring-server, web-servers, application-servers etc. will run within Docker containers and so [understanding how to setup, orchestrate,  startup, monitor and manage them](./02-working-with-docker/readme.md) will be important.
 
 ### 5. Setting up a database
 [MongoDb setup](./03-setup-mongo/a-mongodb-with-docker-cmd/readme.md) to support an event driven services architecture and under pin the systems and services developed.
