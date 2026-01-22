@@ -27,7 +27,8 @@
   
 ### 6. Permit root login on the second container
    Edit ssh configs using the nano editor `nano /etc/ssh/sshd_config`  
-   Find the authentication section and change the line &nbsp;&nbsp;&nbsp;**#PermitRootLogin prohibit-password**&nbsp;&nbsp;&nbsp; to &nbsp;&nbsp;&nbsp;**PermitRootLogin yes**&nbsp;&nbsp;&nbsp;.  
+   Find the authentication section and change the line  
+   &nbsp;&nbsp;&nbsp;**\#PermitRootLogin prohibit-password**&nbsp;&nbsp;&nbsp; to &nbsp;&nbsp;&nbsp;**PermitRootLogin yes**&nbsp;&nbsp;&nbsp;.  
 
 ### 7. Restart the **SSH** service on the second container
    Restart **ssh** service for the changes to effect `service ssh restart`.  
@@ -43,4 +44,5 @@
    
    *Illustrative trace*  
    ![multiple-instances](./_assets/02-start-multiple-instances.png) 
- 
+
+ ### [Back](../readme.md)
