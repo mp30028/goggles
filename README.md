@@ -13,7 +13,7 @@
 
 ### 2. The Repository
 Everything starts with the repository so needs to be set up and interfaced with the Eclipse integrated development environment.  
-[Notes on setting up the repository](./01-setup-repository/a-setting-up-repository/readme.md)
+[Notes on setting up the repository](02-setup-repository/a-setting-up-repository/readme.md)
 
 ### 3. Project (Repository) Layout
 **README.md** file - This file. Root or Home readme file. Describes key aspects of the project and links to other notes.   

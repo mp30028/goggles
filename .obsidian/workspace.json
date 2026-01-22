@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7861b075c4266a35",
+        "id": "d69387c3e7fdbb6b",
         "type": "tabs",
         "children": [
           {
-            "id": "c58fb34c6c883d4d",
+            "id": "bce0964aaccd5606",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "README"
+              "title": "New tab"
             }
           }
         ]
@@ -53,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#PermitRootLogin",
+                "query": "file:01-se",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -180,8 +176,9 @@
       "bases:Create new base": false
     }
   },
-  "active": "c58fb34c6c883d4d",
+  "active": "d7ad1d6b42c15656",
   "lastOpenFiles": [
+    "01-plan",
     "02-working-with-docker/readme.md",
     "02-working-with-docker/e-containers-based-on-built-image/readme.md",
     "02-working-with-docker/d-multi-containers-automated-setup/readme.md",
@@ -189,7 +186,7 @@
     "02-working-with-docker/b-multi-containers-no-network/readme.md",
     "02-working-with-docker/a-single-container/readme.md",
     "README.md",
-    "01-setup-repository/a-setting-up-repository/readme.md",
+    "02-setup-repository/a-setting-up-repository/readme.md",
     "02-working-with-docker/e-containers-based-on-built-image/readme-1.md",
     "02-working-with-docker/e-containers-based-on-built-image/readme.md_DELETE-THIS",
     "02-working-with-docker/e-containers-based-on-built-image/readme-2.md",
