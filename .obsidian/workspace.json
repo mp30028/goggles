@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "e5ad7455f4ffdab1",
+        "id": "82a7e67b1366cd22",
         "type": "tabs",
         "children": [
           {
-            "id": "02154cd45ec56281",
+            "id": "502e02e440bc3e2f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
+              "type": "excalidraw",
+              "state": {
+                "file": "01-plan/planning-roadmap.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "planning-roadmap.excalidraw"
             }
           }
         ]
@@ -177,8 +179,10 @@
       "bases:Create new base": false
     }
   },
-  "active": "02154cd45ec56281",
+  "active": "502e02e440bc3e2f",
   "lastOpenFiles": [
+    "01-plan/planning-roadmap.excalidraw.md",
+    "01-plan/planning-roadmap.excalidraw",
     "README.md",
     "04-setup-mongo/a-mongodb-with-docker-cmd/readme.md",
     "02-setup-repository/readme.md",
@@ -200,7 +204,6 @@
     "03-working-with-docker/e-containers-based-on-built-image/Dockerfile",
     "03-working-with-docker/e-containers-based-on-built-image/containers-based-on-built-image.yml",
     "03-working-with-docker/e-containers-based-on-built-image",
-    "03-working-with-docker",
     "02-working-with-docker/e-containers-based-on-built-image/readme.md",
     "03-working-with-docker/d-multi-containers-automated-setup/readme.md",
     "03-working-with-docker/c-multi-containers-with-network/readme.md",
