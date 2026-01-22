@@ -11,10 +11,14 @@
             "id": "c58fb34c6c883d4d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "README"
             }
           }
         ]
@@ -178,13 +182,13 @@
   },
   "active": "c58fb34c6c883d4d",
   "lastOpenFiles": [
-    "README.md",
     "02-working-with-docker/readme.md",
     "02-working-with-docker/e-containers-based-on-built-image/readme.md",
     "02-working-with-docker/d-multi-containers-automated-setup/readme.md",
     "02-working-with-docker/c-multi-containers-with-network/readme.md",
     "02-working-with-docker/b-multi-containers-no-network/readme.md",
     "02-working-with-docker/a-single-container/readme.md",
+    "README.md",
     "01-setup-repository/a-setting-up-repository/readme.md",
     "02-working-with-docker/e-containers-based-on-built-image/readme-1.md",
     "02-working-with-docker/e-containers-based-on-built-image/readme.md_DELETE-THIS",
