@@ -1,0 +1,15 @@
+
+services:
+  linux-instance:
+    image: alpine:latest
+    container_name: linux-instance
+    hostname: linux-instance
+    command:
+      - /bin/sh
+      - -c 
+      - | 
+        sleep 5;
+        apk upgrade; 
+        apk update; 
+        apk add bash; 
+        sleep infinity;

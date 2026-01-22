@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d69387c3e7fdbb6b",
+        "id": "e5ad7455f4ffdab1",
         "type": "tabs",
         "children": [
           {
-            "id": "bce0964aaccd5606",
+            "id": "02154cd45ec56281",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -167,6 +167,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -176,19 +177,34 @@
       "bases:Create new base": false
     }
   },
-  "active": "d7ad1d6b42c15656",
+  "active": "02154cd45ec56281",
   "lastOpenFiles": [
-    "01-plan",
-    "02-working-with-docker/readme.md",
-    "02-working-with-docker/e-containers-based-on-built-image/readme.md",
-    "02-working-with-docker/d-multi-containers-automated-setup/readme.md",
-    "02-working-with-docker/c-multi-containers-with-network/readme.md",
-    "02-working-with-docker/b-multi-containers-no-network/readme.md",
-    "02-working-with-docker/a-single-container/readme.md",
     "README.md",
-    "02-setup-repository/a-setting-up-repository/readme.md",
+    "04-setup-mongo/a-mongodb-with-docker-cmd/readme.md",
+    "02-setup-repository/readme.md",
+    "03-working-with-docker/readme.md",
+    "02-working-with-docker",
+    "03-working-with-docker/b-multi-containers-no-network/readme.md",
+    "03-working-with-docker/a-single-container/readme.md",
+    "03-working-with-docker/e-containers-based-on-built-image/_assets/work.drawio",
+    "03-working-with-docker/e-containers-based-on-built-image/_assets/05-known-hosts-edit.png",
+    "03-working-with-docker/e-containers-based-on-built-image/_assets/04-known-hosts.png",
+    "03-working-with-docker/e-containers-based-on-built-image/_assets/03-host-verifcation-failure.png",
+    "03-working-with-docker/e-containers-based-on-built-image/_assets/02-ssh-from-host.png",
+    "03-working-with-docker/e-containers-based-on-built-image/_assets/01-port-mapping.png",
+    "03-working-with-docker/e-containers-based-on-built-image/ssh_configs/root_permission.conf",
+    "03-working-with-docker/e-containers-based-on-built-image/_assets",
+    "03-working-with-docker/e-containers-based-on-built-image/ssh_configs",
+    "03-working-with-docker/e-containers-based-on-built-image/sample.env",
+    "03-working-with-docker/e-containers-based-on-built-image/readme.md",
+    "03-working-with-docker/e-containers-based-on-built-image/Dockerfile",
+    "03-working-with-docker/e-containers-based-on-built-image/containers-based-on-built-image.yml",
+    "03-working-with-docker/e-containers-based-on-built-image",
+    "03-working-with-docker",
+    "02-working-with-docker/e-containers-based-on-built-image/readme.md",
+    "03-working-with-docker/d-multi-containers-automated-setup/readme.md",
+    "03-working-with-docker/c-multi-containers-with-network/readme.md",
     "02-working-with-docker/e-containers-based-on-built-image/readme-1.md",
-    "02-working-with-docker/e-containers-based-on-built-image/readme.md_DELETE-THIS",
     "02-working-with-docker/e-containers-based-on-built-image/readme-2.md",
     "02-working-with-docker/d-multi-containers-automated-setup/readme-2.md",
     "02-working-with-docker/d-multi-containers-automated-setup/readme-1.md"
