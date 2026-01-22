@@ -1,0 +1,54 @@
+
+services:
+  first_container:
+    image: ubuntu:latest
+    container_name: first_container
+    hostname: first_container
+    command:
+      - /bin/bash
+      - -c 
+      - | 
+        echo -e "Starting installs and updates in first_container"
+        apt -y update;
+        apt -y upgrade;  
+        apt -y install nano;
+        apt -y install openssh-client;
+        apt -y install openssh-server;        
+        echo -e "Finsished installs and updates in first_container\n\nStarting SSH"
+        service ssh start;
+        echo -e "SSH start completed\n\nSleeping to keep first_container up"
+        sleep infinity;
+    networks:
+      container-net:
+    depends_on:
+      - second_container
+      
+  second_container:
+    image: ubuntu:latest
+    container_name: second_container
+    hostname: second_container
+    command:
+      - /bin/bash
+      - -c 
+      - | 
+        echo -e "Starting installs and updates in second_container"
+        apt -y update;
+        apt -y upgrade;  
+        apt -y install nano;
+        apt -y install openssh-client;
+        apt -y install openssh-server;
+        echo -e "Finsished installs and updates in second_container\n\nPassword update started"
+        echo -e "${SECOND_CONTAINER_ROOT_PASSWORD:-CocaCola}\n${SECOND_CONTAINER_ROOT_PASSWORD:-CocaCola}" | passwd root;
+        echo -e "Password update completed in second_container\n\nStarting SSH"
+        service ssh start;
+        echo -e "SSH start completed\n\nSleeping to keep second_container up"
+        sleep infinity;
+    networks:
+      container-net:  
+    volumes:
+      - ./ssh_configs/root_permission.conf:/etc/ssh/sshd_config.d/root_permission.conf
+        
+networks:
+  container-net:
+    name: container-net
+    driver: bridge
