@@ -3,7 +3,8 @@
 ## A Reference repository to set up, develop, deploy, run, monitor and manage a web project
 
 ## 1. The Plan
-![[planning-roadmap.svg]]
+![planning-roadmap.svg](./01-plan/planning-roadmap.svg)  
+
 ### 2. The stack
 **i.** GitHub - code and configuration management  
 **ii.** Eclipse - integrated development environment  
