@@ -25,7 +25,6 @@ services:
     image: mongo:8.2.3
     volumes:
       - ./data-files/data-2:/data/db
-      - ./keys/goggles.key:/keys/goggles.key
     networks:
       mongo-net:
     ports:
@@ -37,8 +36,6 @@ services:
       - /bin/sh
       - -c 
       - | 
-        chown mongodb /keys/goggles.key;
-        chmod 600 /keys/goggles.key;        
         mongod --replSet goggle_rs --bind_ip_all;
         
 
@@ -48,7 +45,6 @@ services:
     image: mongo:8.2.3
     volumes:
       - ./data-files/data-3:/data/db
-      - ./keys/goggles.key:/keys/goggles.key
     networks:
       mongo-net:
     ports:
@@ -58,8 +54,6 @@ services:
       - /bin/sh
       - -c 
       - | 
-        chown mongodb /keys/goggles.key
-        chmod 600 /keys/goggles.key
         mongod --replSet goggle_rs --bind_ip_all;
 
   init-goggle-rs:
