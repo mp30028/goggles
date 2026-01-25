@@ -17,12 +17,7 @@ These examples will develop step by step and incrementally a complete solution t
 To get started run a single instance of MongoDb using a direct docker command as illustrated in [this example](./a-mongodb-with-docker-cmd/readme.md)
 
 ### 2. Startup MongoDb networked instances
-Start three instances of MongoDb each running in a docker container of it's own but arranged so that all three containers are in the same Docker network. Use the ***01-create-mongo-networked-instances.yml*** docker-compose file for this.  
-
-The three instances are not yet configured to be in a cluster or secured.  
-
- ![starting-mongo-networked-instances](./_assets/02-starting-mongo-networked-instances.svg)  
- 
+Start three instances of MongoDb each running in a docker container of it's own but arranged so that all three containers are in the same Docker network. [See this example](./b-mongo-networked-instances/readme.md)
  
 ## [Home](../README.md)
  

@@ -11,7 +11,7 @@ Start three instances of MongoDb each running in a docker container of it's own 
 
 The three instances are not yet configured to be in a cluster or secured.  
 
- ![starting-mongo-networked-instances](./_assets/02-starting-mongo-networked-instances.svg)  
+ ![starting-mongo-networked-instances](./_assets/02-starting-mongo-networked-instances.png)  
  
  
 
