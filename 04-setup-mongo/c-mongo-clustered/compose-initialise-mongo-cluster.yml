@@ -1,0 +1,110 @@
+services:
+  mongo-1:
+    container_name: mongo-1
+    image: mongo:8.2.3
+    volumes:
+      - ./data-files/data-1:/data/db
+      - ./keys/goggles.key:/keys/goggles.key
+    networks:
+      mongo-net:
+    ports:
+      - 27017:27017
+    depends_on:
+      - mongo-2
+    restart: always    
+    command:
+      - /bin/sh
+      - -c 
+      - | 
+        chown mongodb /keys/goggles.key;
+        chmod 600 /keys/goggles.key;
+        mongod --replSet goggle_rs --bind_ip_all;
+
+  mongo-2:
+    container_name: mongo-2
+    image: mongo:8.2.3
+    volumes:
+      - ./data-files/data-2:/data/db
+      - ./keys/goggles.key:/keys/goggles.key
+    networks:
+      mongo-net:
+    ports:
+      - 27018:27017
+    depends_on:
+      - mongo-3      
+    restart: always
+    command:
+      - /bin/sh
+      - -c 
+      - | 
+        chown mongodb /keys/goggles.key;
+        chmod 600 /keys/goggles.key;        
+        mongod --replSet goggle_rs --bind_ip_all;
+        
+
+      
+  mongo-3:
+    container_name: mongo-3
+    image: mongo:8.2.3
+    volumes:
+      - ./data-files/data-3:/data/db
+      - ./keys/goggles.key:/keys/goggles.key
+    networks:
+      mongo-net:
+    ports:
+      - 27019:27017
+    restart: always
+    command:
+      - /bin/sh
+      - -c 
+      - | 
+        chown mongodb /keys/goggles.key
+        chmod 600 /keys/goggles.key
+        mongod --replSet goggle_rs --bind_ip_all;
+
+  init-goggle-rs:
+    container_name: init-goggle-rs
+    image: mongo:8.2.3
+    restart: no
+    depends_on:
+      - mongo-1
+      - mongo-2
+      - mongo-3
+    command:    
+      - /bin/sh
+      - -c 
+      - |
+        sleep 15;
+        mongosh --host mongo-1:27017 --eval "
+            var rs_config = { 
+              '_id': 'goggle_rs',
+              'version': 1,
+              'members': [
+                {'_id': 0, 'host': 'mongo-1:27017', 'priority': 3},
+                {'_id': 1, 'host': 'mongo-2:27017', 'priority': 2},
+                {'_id': 2, 'host': 'mongo-3:27017', 'priority': 1}
+               ]
+            };
+            rs.initiate(rs_config, { force: true });
+            rs.status();
+          ";
+        mongosh --host mongo-1:27017 --eval "
+            var usr_config = {
+                'user' : 'mongo_admin',
+                 'pwd': 'password',
+                 'roles': [
+                    {'role': 'userAdminAnyDatabase', 'db': 'admin'}, 
+                    {'role': 'readWriteAnyDatabase', 'db': 'admin'}, 
+                    {'role': 'dbAdminAnyDatabase'  , 'db': 'admin'}, 
+                    {'role': 'clusterAdmin'        , 'db': 'admin'}
+                ]
+             };
+             db.getSiblingDB('admin').createUser(usr_config);
+        ";        
+    networks:
+      mongo-net:
+
+networks:
+  mongo-net:
+    name: mongo-net
+    driver: bridge
