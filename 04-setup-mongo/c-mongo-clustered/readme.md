@@ -7,7 +7,7 @@ A replica-set is cluster of MongoDb instances, also known as nodes, that contain
 This example will create a secure MongoDb cluster with three nodes incrementally step by step.
 
 ## Startup MongoDb networked instances
-Start three instances of MongoDb each running in a docker container of it's own but arranged so that all three containers are in the same Docker network. Use the ***01-create-mongo-networked-instances.yml*** docker-compose file for this.  
+Start three instances of MongoDb each running in a docker container of it's own but arranged so that all three containers are in the same Docker network. Use the ***create-mongo-networked-instances.yml*** docker-compose file for this.  
 
 The three instances are not yet configured to be in a cluster or secured.  
 

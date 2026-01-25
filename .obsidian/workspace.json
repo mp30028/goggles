@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "febf788365f1525d",
+        "id": "68d8164f94a0ee91",
         "type": "tabs",
         "children": [
           {
-            "id": "f2af997a63f0f4ba",
+            "id": "bc6531da5fa33c3e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "04-setup-mongo/b-mongo-networked-instances/readme.md",
+                "mode": "preview",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "readme"
             }
           }
         ]
@@ -74,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 449.5
   },
   "right": {
     "id": "7ceea38a273d72b6",
@@ -177,35 +181,35 @@
       "bases:Create new base": false
     }
   },
-  "active": "d7ad1d6b42c15656",
+  "active": "bc6531da5fa33c3e",
   "lastOpenFiles": [
-    "04-setup-mongo/readme.md",
+    "04-setup-mongo/b-mongo-networked-instances/readme.md",
+    "04-setup-mongo/c-mongo-clustered/data-files/data-3/diagnostic.data/metrics.interim.temp",
+    "04-setup-mongo/c-mongo-clustered/data-files/data-1/WiredTiger.turtle.set",
+    "04-setup-mongo/c-mongo-clustered/data-files/data-2/WiredTiger.turtle.set",
+    "04-setup-mongo/c-mongo-clustered/data-files/data-3/WiredTiger.turtle.set",
+    "04-setup-mongo/c-mongo-clustered/data-files/data-2/diagnostic.data/metrics.interim.temp",
+    "04-setup-mongo/_assets/03-starting-mongo-networked-instances-trail.png",
+    "04-setup-mongo/_assets/02-starting-mongo-networked-instances.png",
     "04-setup-mongo/_assets/drawings.excalidraw.md",
+    "04-setup-mongo/c-mongo-clustered/data-files/data-2/diagnostic.data/metrics.interim",
+    "04-setup-mongo/c-mongo-clustered/data-files/data-1/diagnostic.data/metrics.interim",
+    "04-setup-mongo/c-mongo-clustered/data-files/data-3/diagnostic.data/metrics.interim",
+    "04-setup-mongo/c-mongo-clustered/data-files/data-1/diagnostic.data/metrics.interim.temp",
+    "04-setup-mongo/_assets/Obsidian_rANpkh8X6s.png",
     "04-setup-mongo/_assets/02-starting-mongo-networked-instances.svg",
+    "04-setup-mongo/a-mongodb-with-docker-cmd/readme.md",
+    "04-setup-mongo/_assets/WindowsTerminal_e7iydeHJk5.png",
     "04-setup-mongo/_assets/01-mongodb-cluster.png",
+    "04-setup-mongo/readme.md",
     "04-setup-mongo/_assets",
     "04-setup-mongo/b-mongo-networked-instances/_assets/drawings.excalidraw.md",
     "04-setup-mongo/b-mongo-networked-instances/_assets/02-starting-mongo-networked-instances.svg",
     "04-setup-mongo/b-mongo-networked-instances/_assets/01-mongodb-cluster.png",
-    "04-setup-mongo/b-mongo-networked-instances/_assets",
-    "04-setup-mongo/b-mongo-networked-instances/readme.md",
-    "04-setup-mongo/b-mongo-networked-instances/docker-compose.yml_DISABLED",
-    "04-setup-mongo/b-mongo-networked-instances/data-files/data-3/_tmp/spilldb/WiredTigerHS.wt",
-    "04-setup-mongo/b-mongo-networked-instances/data-files/data-3/_tmp/spilldb/WiredTiger.wt",
-    "04-setup-mongo/b-mongo-networked-instances/data-files/data-3/_tmp/spilldb/WiredTiger.turtle",
-    "04-setup-mongo/b-mongo-networked-instances/data-files/data-3/_tmp/spilldb/WiredTiger.lock",
-    "04-setup-mongo/b-mongo-networked-instances/data-files/data-3/_tmp/spilldb/WiredTiger",
-    "04-setup-mongo/b-mongo-networked-instances/data-files/data-3/_tmp/spilldb",
-    "04-setup-mongo/b-mongo-networked-instances/data-files/data-3/_tmp",
     "04-setup-mongo/b-mongodb-cluster/_assets/drawings.excalidraw.md",
     "04-setup-mongo/b-mongodb-cluster/_assets/02-starting-mongo-networked-instances.svg",
     "04-setup-mongo/b-mongodb-cluster/_assets/02.svg",
-    "04-setup-mongo/b-mongodb-cluster/_assets/02-starting-mongo-networked-instances.png",
     "04-setup-mongo/b-mongodb-cluster/readme.md",
-    "04-setup-mongo/b-mongodb-cluster/_assets/02-starting-mongo-networked-indtances.png",
-    "04-setup-mongo/b-mongodb-cluster/_assets/02-.png",
-    "04-setup-mongo/b-mongodb-cluster/_assets/WindowsTerminal_e7iydeHJk5.png",
-    "04-setup-mongo/a-mongodb-with-docker-cmd/readme.md",
     "README.md",
     "01-plan/_assets/planning-roadmap.excalidraw.md",
     "02-setup-repository/readme.md",
