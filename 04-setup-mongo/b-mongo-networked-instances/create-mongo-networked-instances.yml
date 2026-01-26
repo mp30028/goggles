@@ -1,0 +1,45 @@
+services:
+  mongo-1:
+    container_name: mongo-1
+    image: mongo:8.2.3
+    volumes:
+      - ./data-files/data-1:/data/db
+    networks:
+      mongo-net:
+    ports:
+      - 27017:27017
+    depends_on:
+      - mongo-2
+      - mongo-3
+    restart: always
+
+  mongo-2:
+    container_name: mongo-2
+    image: mongo:8.2.3
+    volumes:
+      - ./data-files/data-2:/data/db
+    networks:
+      mongo-net:
+    ports:
+      - 27018:27017
+    depends_on:
+      - mongo-3      
+    restart: always
+
+
+  mongo-3:
+    container_name: mongo-3
+    image: mongo:8.2.3
+    volumes:
+      - ./data-files/data-3:/data/db
+    networks:
+      mongo-net:
+    ports:
+      - 27019:27017
+    restart: always
+
+
+networks:
+  mongo-net:
+    name: mongo-net
+    driver: bridge

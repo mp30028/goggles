@@ -26,7 +26,7 @@ Everything starts with the repository so needs to be set up and interfaced with 
 Underpinning components such as databases, monitoring-server, web-servers, application-servers etc. will run within Docker containers and so [understanding how to setup, orchestrate,  startup, monitor and manage them](./03-working-with-docker/readme.md) will be important.
 
 ### 6. Setting up a database
-[MongoDb setup](04-setup-mongo/a-mongodb-with-docker-cmd/readme.md) to support an event driven services architecture and under pin the systems and services developed.
+[MongoDb setup](04-setup-mongo/readme.md) to support an event driven services architecture and under pin the systems and services developed.
 
 ### General stuff
 **i.** [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)  

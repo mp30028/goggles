@@ -17,7 +17,7 @@
   **v.** Run the mongo client, mongosh, from the command prompt in the container  
   `mongosh`
   
-  ![Command prompt trace](01-running-simple-mongo-setup.png)
+  ![Command prompt trace](./_assets/01-running-simple-mongo-setup.png)
   
 
-### [Home](../../README.md)
+### [Back](../readme.md)
