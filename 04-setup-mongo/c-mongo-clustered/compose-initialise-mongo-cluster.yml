@@ -104,8 +104,12 @@ services:
                ]
             };
             rs.initiate(rs_config, { force: true });
-            rs.status();
-          ";
+            if (rs.status().ok){
+                print('Replica-Set initialised successfully');
+            }else{
+                print('ERROR; Replica-Set initialisation failed');
+            };
+         ";
           
         sleep 5;
         
@@ -116,8 +120,8 @@ services:
            };
            print('Primary node mongo-1 successfully initialised and available');
             var usr_config = {
-                'user' : 'mongo_admin',
-                 'pwd': 'password',
+                'user' : '${MONGO_ADMIN_USER:-dbadmin}',
+                 'pwd': '${MONGO_ADMIN_PASSWD:-password}',
                  'roles': [
                     {'role': 'userAdminAnyDatabase', 'db': 'admin'}, 
                     {'role': 'readWriteAnyDatabase', 'db': 'admin'}, 
