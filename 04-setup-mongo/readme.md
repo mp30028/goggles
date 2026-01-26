@@ -19,6 +19,9 @@ To get started run a single instance of MongoDb using a direct docker command as
 ### 2. Startup MongoDb networked instances
 Start three instances of MongoDb each running in a docker container of it's own but arranged so that all three containers are in the same Docker network. [See this example](./b-mongo-networked-instances/readme.md)
  
+### 3. Startup MongoDb Replica-Set (cluster)
+Setup a secured cluster with three nodes and then start it up. [See this example](./c-mongo-clustered/readme.md)
+ 
 ## [Home](../README.md)
  
 

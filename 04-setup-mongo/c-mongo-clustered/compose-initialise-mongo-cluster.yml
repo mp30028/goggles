@@ -9,8 +9,6 @@ services:
       mongo-net:
     ports:
       - 27017:27017
-    depends_on:
-      - mongo-2
     restart: always    
     command:
       - /bin/sh
@@ -19,7 +17,13 @@ services:
         chown mongodb /keys/goggles.key;
         chmod 600 /keys/goggles.key;
         mongod --replSet goggle_rs --bind_ip_all;
-
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.runCommand('ping').ok","--quiet"]
+      interval: 15s
+      timeout: 10s
+      retries: 6
+      start_period: 30s
+      
   mongo-2:
     container_name: mongo-2
     image: mongo:8.2.3
@@ -30,14 +34,20 @@ services:
     ports:
       - 27018:27017
     depends_on:
-      - mongo-3      
+      mongo-1:
+        condition: service_healthy
     restart: always
     command:
       - /bin/sh
       - -c 
-      - | 
+      - |         
         mongod --replSet goggle_rs --bind_ip_all;
-        
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.runCommand('ping').ok","--quiet"]
+      interval: 15s
+      timeout: 10s
+      retries: 6
+      start_period: 60s
 
       
   mongo-3:
@@ -49,26 +59,40 @@ services:
       mongo-net:
     ports:
       - 27019:27017
+    depends_on:
+      mongo-1:
+        condition: service_healthy    
+      mongo-2:
+        condition: service_healthy
     restart: always
     command:
       - /bin/sh
       - -c 
       - | 
         mongod --replSet goggle_rs --bind_ip_all;
-
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.runCommand('ping').ok","--quiet"]
+      interval: 15s
+      timeout: 10s
+      retries: 6
+      start_period: 90s
+      
+      
   init-goggle-rs:
     container_name: init-goggle-rs
     image: mongo:8.2.3
     restart: no
     depends_on:
-      - mongo-1
-      - mongo-2
-      - mongo-3
+      mongo-1:
+        condition: service_healthy      
+      mongo-2:
+        condition: service_healthy      
+      mongo-3:
+        condition: service_healthy
     command:    
       - /bin/sh
       - -c 
       - |
-        sleep 15;
         mongosh --host mongo-1:27017 --eval "
             var rs_config = { 
               '_id': 'goggle_rs',
@@ -82,7 +106,15 @@ services:
             rs.initiate(rs_config, { force: true });
             rs.status();
           ";
+          
+        sleep 5;
+        
         mongosh --host mongo-1:27017 --eval "
+           while (! db.isMaster().ismaster ) {
+               print('Waiting for primary node mongo-1 to become available'); 
+               sleep(1000);
+           };
+           print('Primary node mongo-1 successfully initialised and available');
             var usr_config = {
                 'user' : 'mongo_admin',
                  'pwd': 'password',
@@ -93,8 +125,12 @@ services:
                     {'role': 'clusterAdmin'        , 'db': 'admin'}
                 ]
              };
-             db.getSiblingDB('admin').createUser(usr_config);
-        ";        
+            if(db.getSiblingDB('admin').createUser(usr_config).ok){
+                print('user created successfully');
+            }else{
+                print('ERROR: user creation failed');
+            };
+        ";
     networks:
       mongo-net:
 
