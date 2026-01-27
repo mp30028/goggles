@@ -5,6 +5,8 @@ The three instances are not yet configured to be in a cluster or secured.
 
  ![starting-mongo-networked-instances](./_assets/02-starting-mongo-networked-instances.png)  
  
- 
+ ## Understanding docker networking
+ The [snippet below from stackoverflow](https://stackoverflow.com/questions/70303482/host-docker-internal-vs-container-name-when-referencing-ip) gives a very useful guide as to how docker networking works  
+ ![03-docker-networking](./_assets/03-docker-networking.png)
 
 ### [Back](../readme.md)

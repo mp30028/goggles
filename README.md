@@ -28,5 +28,8 @@ Underpinning components such as databases, monitoring-server, web-servers, appli
 ### 6. Setting up a database
 [MongoDb setup](04-setup-mongo/readme.md) to support an event driven services architecture and under pin the systems and services developed.
 
+### 7. Developing a secure event driven platform with comprehensive monitoring
+Build a fully fledged application step by step based on an event drive micro-services architecture secured with Keycloak, an Identity and Access Management (IAM) solution with Grafana monitoring enabled for all the components including infrastructure and developed platform services.
+
 ### General stuff
 **i.** [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)  
