@@ -3,7 +3,8 @@
 ## A Reference repository to set up, develop, deploy, run, monitor and manage a web project
 
 ## 1. The Plan
-![planning-roadmap.svg](./01-plan/planning-roadmap.svg)  
+\<TBD - Planning Roadmap\>
+
 
 ### 2. The stack
 **i.** GitHub - code and configuration management  
@@ -28,5 +29,10 @@ Underpinning components such as databases, monitoring-server, web-servers, appli
 ### 6. Setting up a database
 [MongoDb setup](04-setup-mongo/readme.md) to support an event driven services architecture and under pin the systems and services developed.
 
+### 7. Developing a secure event driven platform with comprehensive monitoring
+Build a fully fledged application step by step based on an event drive micro-services architecture secured with Keycloak, an Identity and Access Management (IAM) solution with Grafana monitoring enabled for all the components including infrastructure and developed platform services.  
+See this to [Build the Platform](./05-develop-secure-event-driven-platform/readme.md)
+
 ### General stuff
 **i.** [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)  
+ii. [Open Policy Agent](https://www.openpolicyagent.org/docs)
